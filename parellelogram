@@ -1,0 +1,9 @@
+import java.util.*;
+public class parallelogram {
+    public static void main(String arg[]){
+        Scanner input = new Scanner(System.in);
+        int b = input.nextInt();
+        int h = input.nextInt();
+        System.out.print(b * h);
+    }
+}
