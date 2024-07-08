@@ -1,0 +1,12 @@
+import java.util.*;
+public class trapizium {
+    public static void main(String args[]){
+        Scanner input = new Scanner(System.in);
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int h = input.nextInt();
+        double area = (a + b) * h *0.5;
+        System.out.print(area);
+    }
+
+}
