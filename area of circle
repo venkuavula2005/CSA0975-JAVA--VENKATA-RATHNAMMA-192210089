@@ -1,0 +1,10 @@
+import java.util.*;
+public class circle {
+    public static void main(String args[]){
+        Scanner input = new Scanner(System.in);
+        double area, pi = 3.14;
+        int r = input.nextInt();
+        area = pi * r * r;
+        System.out.print(area);
+    }
+}
