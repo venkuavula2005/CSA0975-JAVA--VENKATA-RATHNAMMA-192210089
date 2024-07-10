@@ -1,0 +1,21 @@
+import java.util.*;
+public class eighth_easy {
+    public static void main(String args[]){
+        Scanner input = new Scanner(System.in);
+        int p, n, r;
+        double res;
+        p = input.nextInt();
+        n = input.nextInt();
+        input.nextLine();
+        char cit = input.nextLine().charAt(0);
+        if (cit == 's'){
+            r = 12;
+        }
+        else{
+            r = 10;
+        }
+
+        res = (p * n * r)/100.0;
+        System.out.print(res);
+    }
+}
