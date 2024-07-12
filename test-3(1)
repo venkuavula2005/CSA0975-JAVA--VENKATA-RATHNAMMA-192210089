@@ -1,0 +1,11 @@
+import java.util.Arrays;
+public class AlphabeticalOrder {
+    public static void main(String[] args) {
+        String[] words = {"banana", "apple", "orange", "grape", "pineapple"};
+        Arrays.sort(words);
+        System.out.println("Words in alphabetical order:");
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+}
