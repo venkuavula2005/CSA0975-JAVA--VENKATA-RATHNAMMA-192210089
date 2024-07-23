@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class UserCalculation {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input
+        Scanner input = new Scanner(System.in);
+        
+        // Read the total number of users
+        System.out.print("Total Users: ");
+        int total_user = input.nextInt();
+        
+        // Read the number of staff users
+        System.out.print("Staff Users: ");
+        int staff_user = input.nextInt();
+        
+        // Calculate the number of non-technical staff users
+        int non_tech = staff_user / 3;
+        
+        // Calculate the number of student users
+        int student_user = total_user - (staff_user + non_tech);
+        
+        // Print the number of student users
+        System.out.println("Student Users: " + student_user);
+    }
+}
