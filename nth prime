@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class PrimeNumbers {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input
+        Scanner input = new Scanner(System.in);
+
+        // Read the integer n from the user
+        System.out.print("Enter the value of n: ");
+        int n = input.nextInt();
+
+        // Array to store the first 100 prime numbers
+        int[] a = new int[100];
+        int x = 0;
+
+        // Find the first 100 prime numbers
+        for (int i = 2; x < 100; i++) {
+            int fact = 0;
+            for (int j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    fact++;
+                }
+            }
+            if (fact == 2) {
+                a[x] = i;
+                x++;
+            }
+        }
+
+        // Print the n-th prime number (note: array index is n-1)
+        System.out.println(n + " prime number is " + a[n - 1]);
+
+        // Print the next n prime numbers following the n-th prime number
+        System.out.print(n + " prime numbers after " + a[n - 1] + " are: ");
+        for (int i = n; i < n + n; i++) {
+            System.out.print(a[i] + " ");
+        }
+    }
+}
