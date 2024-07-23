@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class DaysToYearsWeeksDays {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input
+        Scanner input = new Scanner(System.in);
+        
+        // Read an integer from the user input
+        int num = input.nextInt();
+        
+        // Calculate the number of years
+        int years = num / 365;
+        System.out.println("years: " + years);
+        
+        // Calculate the number of weeks (remaining days after extracting years)
+        int weeks = (num % 365) / 7;
+        System.out.println("weeks: " + weeks);
+        
+        // Calculate the number of days (remaining days after extracting years and weeks)
+        int days = (num % 365) % 7;
+        System.out.println("Days: " + days);
+    }
+}
