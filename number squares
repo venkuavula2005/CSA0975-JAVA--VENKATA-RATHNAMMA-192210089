@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class NumberSquares {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input
+        Scanner input = new Scanner(System.in);
+
+        // Read the lower and upper bounds from the user
+        System.out.print("Enter the lower bound: ");
+        int lower = input.nextInt();
+        System.out.print("Enter the upper bound: ");
+        int upper = input.nextInt();
+
+        // Iterate through each number from lower to upper (inclusive)
+        for (int i = lower; i <= upper; i++) {
+            // Print the pair (number, square of number)
+            System.out.println("(" + i + "," + (i * i) + ")");
+        }
+    }
+}
