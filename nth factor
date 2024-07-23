@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Factors {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input
+        Scanner input = new Scanner(System.in);
+
+        // Read the integers num and n from the user
+        System.out.print("Enter the number to find factors of: ");
+        int num = input.nextInt();
+        System.out.print("Enter the position of the factor to retrieve: ");
+        int n = input.nextInt();
+
+        // Array to store the factors of num
+        int[] a = new int[100];
+        int x = 0;
+
+        // Find the factors of num
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                a[x] = i;
+                x++;
+            }
+        }
+
+        // Print the total number of factors
+        System.out.println("Number of factors = " + x);
+
+        // Print the n-th factor if it exists
+        if (n <= x && n > 0) {
+            System.out.println(n + " factor of " + num + " = " + a[n - 1]);
+        } else {
+            System.out.println("Invalid position for factor: " + n);
+        }
+    }
+}
