@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class perfectsquare{
+    public static void main(String[]args){
+        Scanner input=new Scanner(System.in);
+        System.out.print("enter the number:");
+        int n=input.nextInt();
+        int temp=0;
+        for(int j=2;j<=6000;j++){
+            int sum=1;
+            for(int i=2;i<=j/2;i++){
+                if(j%i==0){
+                    sum+=i;
+                }
+            }
+            if(sum==j){
+                System.out.print(j+" ");
+                temp++;
+                if(temp>=n){
+                    break;
+                }
+            }
+        }
+    }
+}
