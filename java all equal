@@ -1,0 +1,26 @@
+public class AllEqual {
+    public static void main(String[] args) {
+        // Check if exactly three arguments are provided
+        if (args.length != 3) {
+            System.out.println("Usage: java AllEqual <int1> <int2> <int3>");
+            return;
+        }
+
+        try {
+            // Parse the command-line arguments as integers
+            int num1 = Integer.parseInt(args[0]);
+            int num2 = Integer.parseInt(args[1]);
+            int num3 = Integer.parseInt(args[2]);
+
+            // Check if all three integers are equal
+            if (num1 == num2 && num2 == num3) {
+                System.out.println("equal");
+            } else {
+                System.out.println("not equal");
+            }
+        } catch (NumberFormatException e) {
+            // Handle the case where the input is not a valid integer
+            System.out.println("Error: All arguments must be valid integers.");
+        }
+    }
+}
